@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+  }
+  
+  #fileInput {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .code-block-container {
+    position: relative;
+    display: none;
+    width: auto;
+    max-height: 400px;
+    overflow: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f5f5f5 25%, #ddd 75%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .code-block-container:hover {
+    transform: scale(1.05);
+  }
+  
+  .code-block {
+    padding: 15px;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    color: #333;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  .code-block::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .code-block::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+  
+  .code-block::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  #copyButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  #copyButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
+  
+  .copied {
+    position: absolute;
+    top: 10px;
+    right: 80px;
+    font-size: 14px;
+    color: green;
+    display: none;
+  }
+  
+  #arrowButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+  
+  #arrowButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
+  
